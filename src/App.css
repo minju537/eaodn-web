@@ -40,3 +40,63 @@
 .read-the-docs {
   color: #888;
 }
+/* ===== Mobile Responsive Patch ===== */
+* { box-sizing: border-box; }
+
+.app-root {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.page-shell {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  flex-wrap: wrap; /* 좁아지면 줄바꿈 */
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* 좁아지면 줄바꿈 */
+  justify-content: flex-end;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-links a { white-space: nowrap; }
+
+.top-lang-toggle {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .page-shell { padding: 12px; }
+  .brand { width: 100%; }
+  .top-right { width: 100%; justify-content: flex-start; }
+  .nav-links { width: 100%; gap: 8px; }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 6px 8px;
+    border-radius: 10px;
+    background: rgba(15, 23, 42, 0.06);
+  }
+}
